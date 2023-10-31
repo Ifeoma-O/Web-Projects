@@ -4,10 +4,12 @@
         <title>First Draft Of Chat App</title>
     </head>
     <body>
-        <h1>Chat App</h1>
+  
+
+        <!-- <h1>Chat App</h1>
         <div id="message-box"></div>
         <input type="text" id="message-input" placeholder="What do you have in mind?">
-        <button id="send-btn">Send</button>
+        <button id="send-btn">Send</button> -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js">/* I'm not even sure if this src is supposed to load first */ </script>
         <script>/* I hate JS maaaan */
@@ -15,7 +17,7 @@
 
             socket.on('message', function(data){
                 var messageBox = document.getElementById('message-box');
-                var messageDiv = document.createElement('div');
+                var messageDiv = document.createElement('div'); 
                 messageDiv.textContent = data.username + ': ' + data.message; // edited this line so it also displays the username with the message sent
                 messageBox.appendChild(messageDiv);
             });
